@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bot Rocket-Stresser</title>
+  <style>
+    body {
+      margin: 0;
+      background: url('space-background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Arial', sans-serif;
+      color: #fff;
+    }
+
+    #loader {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      flex-direction: column;
+      color: #00e5ff;
+      font-family: sans-serif;
+    }
+
+    .spinner {
+      border: 5px solid #333;
+      border-top: 5px solid #00e5ff;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    nav {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 16px 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #333;
+    }
+
+    nav .title {
+      font-size: 24px;
+      font-weight: bold;
+      color: #00e5ff;
+    }
+
+    nav a {
+      color: #ccc;
+      margin-left: 20px;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      color: #00e5ff;
+    }
+
+    .container {
+      padding: 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 32px;
+      font-weight: 900;
+      color: #00e5ff;
+      margin-bottom: 40px;
+      margin-top: 40px;
+    }
+
+    .plan-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 32px;
+    }
+
+    .plan-card {
+      background-color: rgba(0, 0, 0, 0.7);
+      border-radius: 16px;
+      padding: 24px;
+      width: 320px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+
+    .plan-title {
+      font-size: 26px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #00e5ff;
+    }
+
+    .benefits ul {
+      list-style: none;
+      padding: 0;
+      font-size: 16px;
+    }
+
+    .benefits li {
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+    }
+
+    .benefits li::before {
+      content: '✔';
+      color: #4caf50;
+      margin-right: 12px;
+    }
+
+    .benefits li.excluded::before {
+      content: '✘';
+      color: #f44336;
+    }
+
+    .price {
+      font-size: 24px;
+      font-weight: bold;
+      margin-top: 20px;
+      margin-bottom: 5px;
+    }
+
+    .duration {
+      font-size: 14px;
+      color: #aaa;
+      margin-bottom: 20px;
+    }
+
+    .purchase-btn {
+      background-color: #00e5ff;
+      color: #000;
+      border: none;
+      padding: 12px;
+      border-radius: 10px;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .purchase-btn:hover {
+      background-color: #4befff;
+    }
+
+    @media (max-width: 768px) {
+      .plan-card {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="loader">
+    <div class="spinner"></div>
+    <p style="margin-top: 15px;">Loading, please wait...</p>
+  </div>
+
+  <nav>
+    <a class="title" href="https://t.me/Ryzesxx" target="_blank">Bot Rocket-Stresser</a>
+    <div>
+      <a href="#plans">Plans</a>
+      <a href="#hold">Hold Service</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div id="plans" class="section-title">Plans</div>
+    <div class="plan-container">
+      <div class="plan-card">
+        <div class="plan-title">Basic Plan – 1 Day</div>
+        <div class="benefits">
+          <ul>
+            <li>Max Time: 60 Seconds</li>
+            <li>Concurrency: 1</li>
+          </ul>
+        </div>
+        <div class="price">IDR 15.000</div>
+        <div class="duration">1 Day</div>
+        <button onclick="location.href='https://t.me/Ryzesxx'" class="purchase-btn">Buy Now</button>
+      </div>
+
+      <div class="plan-card">
+        <div class="plan-title">VIP Plan – 7 Days</div>
+        <div class="benefits">
+          <ul>
+            <li>Max Time: 120 Seconds</li>
+            <li>Concurrency: 1</li>
+          </ul>
+        </div>
+        <div class="price">IDR 100.000</div>
+        <div class="duration">7 Days</div>
+        <button onclick="location.href='https://t.me/Ryzesxx'" class="purchase-btn">Buy Now</button>
+      </div>
+
+      <div class="plan-card">
+        <div class="plan-title">VVIP Plan – 30 Days</div>
+        <div class="benefits">
+          <ul>
+            <li>Max Time: 600 Seconds</li>
+            <li>Concurrency: 3</li>
+          </ul>
+        </div>
+        <div class="price">IDR 400.000 – 500.000</div>
+        <div class="duration">30 Days</div>
+        <button onclick="location.href='https://t.me/Ryzesxx'" class="purchase-btn">Buy Now</button>
+      </div>
+    </div>
+
+    <div id="hold" class="section-title">Hold Service</div>
+    <div class="plan-container">
+      <div class="plan-card">
+        <div class="plan-title">Hold Basic</div>
+        <div class="benefits">
+          <ul>
+            <li>1 Hour Non-stop Attack</li>
+            <li>Cant Reach The Page</li>
+            <li class="excluded">Removed From Keyword</li>
+            <li class="excluded">Down 24/7</li>
+          </ul>
+        </div>
+        <div class="price">$11.00</div>
+        <div class="duration">Per Hour</div>
+        <button onclick="location.href='https://t.me/Ryzesxx'" class="purchase-btn">Contact Me</button>
+      </div>
+
+      <div class="plan-card">
+        <div class="plan-title">Hold Pro</div>
+        <div class="benefits">
+          <ul>
+            <li>1 Day Non-stop Attack</li>
+            <li>Cant Reach The Page</li>
+            <li>Removed From Keyword</li>
+            <li>Down 24/7</li>
+          </ul>
+        </div>
+        <div class="price">$150.00</div>
+        <div class="duration">Per Day</div>
+        <button onclick="location.href='https://t.me/Ryzesxx'" class="purchase-btn">Contact Me</button>
+      </div>
+
+      <div class="plan-card">
+        <div class="plan-title">Hold Ultimate</div>
+        <div class="benefits">
+          <ul>
+            <li>Suspend Website Page</li>
+            <li>Cant Reach The Page</li>
+            <li>Removed From Keyword</li>
+            <li>Cant Access Permanently</li>
+          </ul>
+        </div>
+        <div class="price">$???.??</div>
+        <div class="duration">Until Suspend</div>
+        <button onclick="location.href='https://t.me/Ryzesxx'" class="purchase-btn">Contact Me</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        const loader = document.getElementById("loader");
+        loader.style.opacity = "0";
+        loader.style.transition = "opacity 0.5s ease";
+        setTimeout(() => loader.style.display = "none", 500);
+      }, 5000); 
+    });
+  </script>
+</body>
+</html>
